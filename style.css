@@ -1,0 +1,104 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #181818;
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+.container {
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.tech-stack {
+  font-size: 60px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.tech-stack:hover {
+  transform: scale(1.3);
+}
+
+.html:hover {
+  color: #dd462c;
+}
+
+.css:hover {
+  color: #00a2ff;
+}
+
+.js:hover {
+  color: #f1f112;
+}
+
+.figma:hover {
+  color: #780adf;
+}
+
+.git:hover {
+  color: #da1a1a;
+}
+
+.bar-container {
+  display: flex;
+  justify-content: space-between;
+  min-width: 70%;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 10px 0;
+  font-size: 12px;
+}
+
+.bar-container span {
+  padding: 0 5px;
+}
+
+.bar {
+  width: 100%;
+  height: 12px;
+  background-color: rgb(228, 228, 228);
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 1px 5px #181818;
+}
+
+.bar:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  border-radius: 2px;
+  background: linear-gradient(45deg, #0B71E9, #0DE899);
+  box-shadow: 0 0px 5px #00a2ff;
+  transition: all 0.3s ease-in-out;
+}
+
+.html:hover ~ .bar-container .bar::after {
+  width: 80%;
+}
+
+.css:hover ~ .bar-container .bar::after {
+  width: 75%;
+}
+
+.js:hover ~ .bar-container .bar::after {
+  width: 40%;
+}
+
+.figma:hover ~ .bar-container .bar::after {
+  width: 60%;
+}
+
+.git:hover ~ .bar-container .bar::after {
+  width: 70%;
+}
